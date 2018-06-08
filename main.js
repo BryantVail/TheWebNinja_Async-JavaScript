@@ -1,5 +1,5 @@
 //main.js
-//#2_intro
+//#3_callbackFunctions
 /*
     Asynchronous Javascript & XML
 
@@ -12,35 +12,9 @@
 */
 
 window.onload = function(){
-    var http = new XMLHttpRequest();
-
-    http.onreadystatechange = function(){
-        if(http.readyState == 4 && http.status == 200){
-            console.log(
-                JSON.parse(http.response)
-            );
-        }
-        //console.log(http);
-    };//end onreadystatechange
-    http.open("GET", "data/tweets.json", true);
-    http.send();
-
-    //test async
-    //console.log("test");
 
 
-    //jquery method
-    $.get("data/tweets.json"/*1st retrieved*/, function(data)/*ran after 1st param recieved*/{
-        console.log(
-            data
-        );
-    });
-    console.log(
-        "test"
-    );
 };
-
-
 
 
 
